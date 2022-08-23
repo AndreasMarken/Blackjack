@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxui.BlackJackController">
+   <children>
+      <TextField fx:id="balance" editable="false" layoutX="14.0" layoutY="713.0" prefHeight="46.0" prefWidth="302.0" text="Bank: $0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <ButtonBar fx:id="chips" layoutX="1001.0" layoutY="736.0" />
+      <ButtonBar fx:id="chips1" layoutX="1001.0" layoutY="701.0" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" prefHeight="69.0" prefWidth="243.0" text="BACK">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font></Button>
+      <TextField fx:id="Bet" editable="true" layoutX="14.0" layoutY="654.0" prefHeight="46.0" prefWidth="188.0" promptText="Bet: $0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="dealButton" layoutX="1023.0" layoutY="649.0" mnemonicParsing="false" onAction="#handleDeal" prefHeight="128.0" prefWidth="243.0" text="DEAL" disable="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="hitButton" disable="true" layoutX="517.0" layoutY="704.0" mnemonicParsing="false" onAction="#handleHit" prefHeight="65.0" prefWidth="128.0" text="HIT">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="standButton" disable="true" layoutX="657.0" layoutY="704.0" mnemonicParsing="false" onAction="#handleStand" prefHeight="65.0" prefWidth="128.0" text="STAND">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Pane layoutX="560.0" layoutY="511.0" prefHeight="178.0" prefWidth="170.0" style="-fx-background-radius: 50%; -fx-border-radius: 50%; -fx-border-color: black; -fx-border-width: 4; -fx-background-color: green;">
+         <children>
+            <Label fx:id="userScore" layoutX="65.0" layoutY="112.0" prefHeight="52.0" prefWidth="74.0" text="0">
+               <font>
+                  <Font size="42.0" />
+               </font></Label>
+         </children></Pane>
+      <Group />
+      <Label fx:id="user" layoutX="15.0" layoutY="587.0" prefHeight="54.0" prefWidth="305.0" text="CURRENT PLAYER" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="dealerScore" layoutX="565.0" layoutY="40.0" prefHeight="55.0" prefWidth="232.0">
+         <font>
+            <Font size="42.0" />
+         </font></Label>
+      <Label fx:id="winnerOutput" layoutX="46.0" layoutY="295.0" prefHeight="153.0" prefWidth="356.0" />
+      <Button fx:id="betButton" layoutX="222.0" layoutY="654.0" mnemonicParsing="false" onAction="#handleBet" prefHeight="40.0" prefWidth="92.0" text="Bet" />
+      <FlowPane fx:id="dealerFlowPane" layoutX="289.0" layoutY="117.0" prefHeight="200.0" prefWidth="711.0" />
+      <FlowPane fx:id="userFlowPane" layoutX="309.0" layoutY="396.0" prefHeight="200.0" prefWidth="711.0" />
+   </children>
+</AnchorPane>

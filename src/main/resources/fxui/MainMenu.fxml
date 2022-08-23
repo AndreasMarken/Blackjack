@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="855.0" prefWidth="1276.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxui.MainMenuController">
+         <children>
+            <Button fx:id="playButton" layoutX="463.0" layoutY="394.0" mnemonicParsing="false"  prefHeight="119.0" prefWidth="346.0" text="New Game" onAction="#playButton">
+               <font>
+                  <Font name="Verdana Bold" size="32.0" />
+               </font></Button>
+            <Button fx:id="quitButton" layoutX="514.0" layoutY="676.0" mnemonicParsing="false"  prefHeight="69.0" prefWidth="243.0" text="QUIT" onAction="#quitButton">
+               <font>
+                  <Font name="Verdana Bold" size="32.0" />
+               </font></Button>
+            <Text layoutX="360.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLACK JACK" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Text>
+            <Button fx:id="loadGameButton" layoutX="464.0" layoutY="536.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="346.0" text="Load Game" onAction="#loadButton">
+               <font>
+                  <Font name="Verdana Bold" size="32.0" />
+               </font>
+            </Button>
+         </children>
+    </AnchorPane>

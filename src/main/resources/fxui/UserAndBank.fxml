@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="769.0" prefWidth="1200.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxui.UserAndBankController">
+   <children>
+      <Button fx:id="startGameButton" disable="true" layoutX="456.0" layoutY="659.0" mnemonicParsing="false" onAction="#startGame" prefHeight="89.0" prefWidth="349.0" text="START GAME">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font></Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" prefHeight="69.0" prefWidth="243.0" text="BACK">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font></Button>
+      <Text layoutX="352.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPOSIT MONEY INTO YOUR BANK" textAlignment="CENTER" underline="true" wrappingWidth="560.509765625">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <TextField fx:id="depositField" disable="true" editable="True" layoutX="358.0" layoutY="469.0" text="0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <ButtonBar fx:id="addBalanceButtonBar" disable="true" layoutX="333.0" layoutY="557.0" prefHeight="55.0" prefWidth="640.0">
+         <buttons>
+            <Button fx:id="plus1" mnemonicParsing="false" onAction="#addBalance1" prefWidth="67.0" text="+1$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="plus5" mnemonicParsing="false" onAction="#addBalance5" prefWidth="67.0" text="+5$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="plus25" mnemonicParsing="false" onAction="#addBalance25" prefWidth="67.0" text="+25$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="plus50" mnemonicParsing="false" onAction="#addBalance50" prefHeight="39.0" prefWidth="95.0" text="+50$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="plus100" mnemonicParsing="false" onAction="#addBalance100" text="+100$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="plus500" mnemonicParsing="false" onAction="#addBalance500" prefWidth="67.0" text="+500$">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Text layoutX="321.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create User:" textAlignment="CENTER" underline="true" wrappingWidth="646.5599975585938">
+         <font>
+            <Font name="System Bold" size="57.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userName" editable="True" layoutX="441.0" layoutY="153.0" promptText="Username">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <Button fx:id="generatePlayer" layoutX="481.0" layoutY="238.0" mnemonicParsing="true" onAction="#generatePlayer" prefHeight="78.0" prefWidth="331.0" text="Create User">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button fx:id="depositButton" disable="true" layoutX="831.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleDepositButton" prefHeight="66.0" prefWidth="169.0" text="Deposit">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
+      <Text layoutX="32.0" layoutY="697.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current user:" textAlignment="CENTER" underline="true" wrappingWidth="167.8087921142578">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="currentPlayer" layoutX="190.0" layoutY="663.0" prefHeight="51.0" prefWidth="235.0" text="None">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Text layoutX="34.0" layoutY="750.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User balance:" textAlignment="CENTER" underline="true" wrappingWidth="167.8087921142578">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="playerBalance" layoutX="196.0" layoutY="718.0" prefHeight="51.0" prefWidth="235.0" text="None">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveGame" disable="true" layoutX="972.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleSaveGame" prefHeight="66.0" prefWidth="211.0" text="Save Game">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Button>
+      <TextField fx:id="saveFile" disable="true" layoutX="968.0" layoutY="37.0" prefHeight="41.0" prefWidth="216.0" promptText="Enter filename to save to" />
+   </children>
+</AnchorPane>
